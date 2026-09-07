@@ -5,6 +5,6 @@ fi
 i=1
 while [ "$i" -le "$n" ];
 do
-    echo "$i"
+    echo "This is loop number $i"
     i=$((i + 1))
 done 
