@@ -1,2 +1,2 @@
-## cd left/down/beginning/
-## cat README
+cd left/down/beginning/
+cat README
