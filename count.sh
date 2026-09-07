@@ -1,5 +1,3 @@
 so1=$(ls -R | wc -l)
-echo "$so1"
 ket_qua=$((so1 * 5))
-
-echo "$ket_qua"
+echo "&#11;Total files * 5: $ket_qua$&#11"
