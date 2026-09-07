@@ -1,1 +1,1 @@
-ls -p | grep -v / | tr '\n' ','
+ls -I '.*'
