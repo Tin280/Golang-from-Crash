@@ -1,1 +1,1 @@
-ls -Atmp
+ls -A -t -m -p -F
