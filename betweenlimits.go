@@ -1,8 +1,16 @@
-package sprint 
+package sprint
+
 func BetweenLimits(from, to rune) string {
-	result := ""
-	for p := from +1; p < to; p++ {
-		result += string(p)
+    result := ""
+	switch {
+	case from < to:
+    	for p := from +1; p < to; p++ {
+        	result += string(p)
+    	}
+	default:
+		for p := to +1; p < from; p++ {
+			result += string(p)
 		}
-	return result
+	}
+    return result
 }
