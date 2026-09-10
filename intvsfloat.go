@@ -1,9 +1,9 @@
 package sprint
 func IntVsFloat(i int, f float32) string {
 	switch {	
-	case i > int(f):
-		return "Interger"
-	case i < int(f):
+	case float32(i) > (f):
+		return "Integer"
+	case float32(i) < (f):
 		return "Float"
 	default:
 		return "Same"
