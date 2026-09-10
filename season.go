@@ -6,13 +6,13 @@ func Season(month string) string {
 	autumn := []string{"sep","oct","nov"}
 	switch month {
 	case winter[0], winter[1], winter[2]:
-		return "Winter"
+		return "winter"
 	case spring[0], spring[1], spring[2]:
-		return "Spring"
+		return "spring"
 	case summer[0], summer[1], summer[2]:
-		return "Summer"
+		return "summer"
 	case autumn[0], autumn[1], autumn[2]:
-		return "Autumn"
+		return "autumn"
 	default:
 		return "Invalid input: " + month
 	}
