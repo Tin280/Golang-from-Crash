@@ -1,3 +1,4 @@
+package sprint
 func IntVsFloat(i int, f float32) string {
 	switch {	
 	case i > int(f):
