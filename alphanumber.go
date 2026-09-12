@@ -1,17 +1,21 @@
 package sprint
 
-import "strconv"
-
 func AlphaNumber(n int) string {
-	num := strconv.Itoa(n)
 	result := ""
 
-	for i := 0; i < len(num); i++ {
-		if num[i] == '-' {
-			result += "-"
-		} else {
-			result += string('a' + (num[i] - '0'))
-		}
+	if n < 0 {
+		result += "-"
+		n = -n
+	}
+
+	if n == 0 {
+		return "a"
+	}
+
+	for n > 0 {
+		digit := n % 10
+		result = string(rune('a'+digit)) + result
+		n /= 10
 	}
 
 	return result
