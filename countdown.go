@@ -5,7 +5,7 @@ func Countdown(n int) string {
 	result := ""
 
 	for i := n; i > 0; i -= 2 {
-		result += fmt.Sprintf("%d, ", i)
+		result += i
 	}
 
 	result += "0! "
