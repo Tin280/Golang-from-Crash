@@ -8,7 +8,7 @@ func Countdown(n int) string {
 		result += fmt.Sprintf("%d, ", i)
 	}
 
-	result += "0!"
+	result += "0! "
 
 	return result
 }
