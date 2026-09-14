@@ -1,5 +1,5 @@
 package main 
-import "fmt"
+// import "fmt"
 func BulkAtoi(arr []string) []int {
 	var result []int
 
@@ -37,6 +37,6 @@ func BulkAtoi(arr []string) []int {
 
 	return result
 }
-func main(){
-	fmt.Println(BulkAtoi([]string{"8", "kood", "-13"}))
-}
+// func main(){
+// 	fmt.Println(BulkAtoi([]string{"8", "kood", "-13"}))
+// }
