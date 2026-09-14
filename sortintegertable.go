@@ -10,13 +10,13 @@ func SortIntegerTable(table []int) []int {
 	table[pivot],table[right] = table[right],table[pivot]
 	for i:= range table {
 		if table[i]<table[right] {
-			table[i],tablep[left] = table[left],table[i]
+			table[i],table[left] = table[left],table[i]
 			left++
 		
 		}
 			table[left], table[right] = table[right], table[left]
 
-	quickSort(table[:left])
-	quickSort(table[left+1:])
+	SortIntegerTable(table[:left])
+	SortIntegerTable(table[left+1:])
 	}
 }
