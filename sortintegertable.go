@@ -5,18 +5,18 @@ func SortIntegerTable(table []int) []int {
 		return table
 	}
 	left, right =0,len(table-1)
-	pivot = len(table)/2
+	pivot := len(table)/2
 
-	arr[pivot],arr[right] = arr[right],arr[pivot]
-	for i:= range arr {
-		if arr[i]<arr[right] {
-			arr[i],arrp[left] = arr[left],arr[i]
+	table[pivot],table[right] = table[right],table[pivot]
+	for i:= range table {
+		if table[i]<table[right] {
+			table[i],tablep[left] = table[left],table[i]
 			left++
 		
 		}
-			arr[left], arr[right] = arr[right], arr[left]
+			table[left], table[right] = table[right], table[left]
 
-	quickSort(arr[:left])
-	quickSort(arr[left+1:])
+	quickSort(table[:left])
+	quickSort(table[left+1:])
 	}
 }
