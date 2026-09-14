@@ -19,5 +19,5 @@ func SortIntegerTable(table []int) []int {
 	SortIntegerTable(table[:left])
 	SortIntegerTable(table[left+1:])
 	}
-	return arr
+	return table
 }
