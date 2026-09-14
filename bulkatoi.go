@@ -1,6 +1,6 @@
 package main 
-// import "fmt"
-func BulkAtoi(arr []string) any {
+import "fmt"
+func BulkAtoi(arr []string) []int {
 	var result []int
 
 	for _, s := range arr {
@@ -37,6 +37,6 @@ func BulkAtoi(arr []string) any {
 
 	return result
 }
-// func main(){
-// 	fmt.Println(BulkAtoi([]string{"8", "kood", "-13"}))
-// }
+func main(){
+	fmt.Println(BulkAtoi([]string{"8", "kood", "-13"}))
+}
