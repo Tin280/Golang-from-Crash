@@ -1,47 +1,43 @@
 package main 
 // import "fmt"
 
-func StrToInt(s string) int {
-	if len(s) == 0 {
-		return 0
-	}
+func BulkAtoi(arr []string) []int {
+	var result []int
 
-	sign := 1
-	start := 0
-
-	if s[0] == '+' {
-		start = 1
-	} else if s[0] == '-' {
-		sign = -1
-		start = 1
-	}
-
-	// Chỉ có dấu + hoặc -
-	if start == len(s) {
-		return 0
-	}
-
-	result := 0
-
-	for i := start; i < len(s); i++ {
-		if s[i] < '0' || s[i] > '9' {
-			return 0
+	for _, s := range arr {
+		if len(s) == 0 {
+			return []int{}
 		}
 
-		result = result*10 + int(s[i]-'0')
+		sign := 1
+		start := 0
+
+		if s[0] == '+' {
+			start = 1
+		} else if s[0] == '-' {
+			sign = -1
+			start = 1
+		}
+
+		if start == len(s) {
+			return []int{}
+		}
+
+		num := 0
+
+		for i := start; i < len(s); i++ {
+			if s[i] < '0' || s[i] > '9' {
+				return []int{}
+			}
+
+			num = num*10 + int(s[i]-'0')
+		}
+
+		result = append(result, num*sign)
 	}
 
-	return result * sign
-}
-func BulkAtoi(arr []string) any {
-	var result [] int
-	for _, r := range arr {
-			result = append(result,StrToInt(r))
-
-	}
 	return result
 }
-
 // func main(){
 // 	fmt.Println(BulkAtoi([]string{"8", "kood", "-13"}))
 // }
