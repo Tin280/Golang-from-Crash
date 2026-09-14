@@ -4,7 +4,7 @@ func SortIntegerTable(table []int) []int {
 	if len(table)<2 {
 		return table
 	}
-	left, right =0,len(table-1)
+	left, right :=0,len(table-1)
 	pivot := len(table)/2
 
 	table[pivot],table[right] = table[right],table[pivot]
