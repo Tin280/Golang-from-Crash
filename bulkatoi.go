@@ -1,11 +1,14 @@
-package main 
+package main
+
 // import "fmt"
+
 func BulkAtoi(arr []string) []int {
-	var result []int
+	var resultfinal []int
 
 	for _, s := range arr {
 		if len(s) == 0 {
-			return nil
+			resultfinal = append(resultfinal, 0)
+			continue
 		}
 
 		sign := 1
@@ -18,25 +21,35 @@ func BulkAtoi(arr []string) []int {
 			start = 1
 		}
 
+		// Chỉ có "+" hoặc "-"
 		if start == len(s) {
-			return nil
+			resultfinal = append(resultfinal, 0)
+			continue
 		}
 
-		num := 0
+		result := 0
+		valid := true
 
 		for i := start; i < len(s); i++ {
 			if s[i] < '0' || s[i] > '9' {
-				return nil
+				valid = false
+				break
 			}
 
-			num = num*10 + int(s[i]-'0')
+			result = result*10 + int(s[i]-'0')
 		}
 
-		result = append(result, num*sign)
+		if !valid {
+			resultfinal = append(resultfinal, 0)
+			continue
+		}
+
+		resultfinal = append(resultfinal, result*sign)
 	}
 
-	return result
+	return resultfinal
 }
-// func main(){
+
+// func main() {
 // 	fmt.Println(BulkAtoi([]string{"8", "kood", "-13"}))
 // }
