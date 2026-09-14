@@ -1,5 +1,4 @@
-package main
-import "fmt"
+package sprint
 func SortIntegerTable(table []int) []int {
 	if len(table)<2 {
 		return table
@@ -21,8 +20,4 @@ func SortIntegerTable(table []int) []int {
 	SortIntegerTable(table[:left])
 	SortIntegerTable(table[left+1:])
 	return table
-}
-
-func main(){
-	fmt.Println(SortIntegerTable([]int{2, 0, 5, 4, 1, 3}))
 }
