@@ -18,5 +18,5 @@ func BalanceOut(arr []bool) []bool {
 			arr = append(arr, false)
 		}
 	}
-	result arr
+	return arr
 }
