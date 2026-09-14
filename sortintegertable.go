@@ -1,10 +1,11 @@
-package sprint
-
+package main
+import "fmt"
 func SortIntegerTable(table []int) []int {
 	if len(table)<2 {
 		return table
 	}
-	left, right :=0,len(table-1)
+
+	left, right :=0,len(table)-1
 	pivot := len(table)/2
 
 	table[pivot],table[right] = table[right],table[pivot]
@@ -14,10 +15,14 @@ func SortIntegerTable(table []int) []int {
 			left++
 		
 		}
-			table[left], table[right] = table[right], table[left]
 
+	}
+				table[left], table[right] = table[right], table[left]
 	SortIntegerTable(table[:left])
 	SortIntegerTable(table[left+1:])
-	}
 	return table
+}
+
+func main(){
+	fmt.Println(SortIntegerTable([]int{2, 0, 5, 4, 1, 3}))
 }
